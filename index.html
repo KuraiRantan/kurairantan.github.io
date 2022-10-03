@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Jorge Camargo</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img class="sections-menu-icon" src="./assets/icons/menu-icon.svg" alt="menu-icon">
+        <div class="header-menu">
+            <div class="logo">
+                <img src="./assets/images/me.png" alt="">
+            </div>
+            <nav class="sections">
+                <ul class="sections-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mi</a></li>
+                    <li><a href="#conocimientos">Conocimientos</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+
+                </ul>
+            </nav>
+            <div class="social">
+                <ul class="social-list">
+                    <li><a href="https://www.linkedin.com/in/camargo-jorge/" target="_blank"><img
+                                src="./assets/icons/linkedin.svg" alt="GitHub"></a></li>
+                    <li><a href="https://www.github.com/KuraiRantan" target="_blank"><img
+                                src="./assets/icons/github.svg" alt="LinkedIn"></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="ancla inicio" id="inicio">
+            <img src="./assets/images/logo-inicio.png" alt="imagen inicio">
+            <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 435 50'
+                style='background-color: #00000000;' width='700px' height='50px'>
+
+
+                <path id='path0'>
+                    <animate id='d0' attributeName='d' begin='0s;d1.end' dur='6000ms'
+                        values='m0,25 h0 ; m0,25 h435 ; m0,25 h435 ; m0,25 h0'
+                        keyTimes='0;0.66666666666667;0.83333333333333;1' />
+                </path>
+                <text font-family='"Fira code", monospace' fill='#fff' font-size='22' dominant-baseline='middle' x='50%'
+                    text-anchor='middle'>
+                    <textPath xlink:href='#path0'>
+                        Hola, soy Jorge Camargo
+                    </textPath>
+                </text>
+
+                <path id='path1'>
+                    <animate id='d1' attributeName='d' begin='d0.end' dur='6000ms'
+                        values='m0,25 h0 ; m0,25 h435 ; m0,25 h435 ; m0,25 h0'
+                        keyTimes='0;0.66666666666667;0.83333333333333;1' />
+                </path>
+                <text font-family='"Fira code", monospace' fill='#fff' font-size='20' dominant-baseline='middle' x='50%'
+                    text-anchor='middle'>
+                    <textPath xlink:href='#path1'>
+                        Desarrollador FullStack
+                    </textPath>
+                </text>
+
+            </svg>
+        </div>
+
+        <div class="ancla padding" id="sobre-mi">
+            <h2>Sobre mi</h2>
+            <p>Soy Jorge Camargo, desarrollador web FullStack Colombiano con especialización en BackEnd y FrontEnd.
+                Tengo experiencia en desarrollo web con fuertes habilidades en React y Express.
+                Entre otras habilidades están Redux, Sequelize, bases de datos relacionales y trabajo en equipo.
+            </p>
+            <span class="span-cv">CV</span>
+        </div>
+
+        <div class="skills ancla padding" id="conocimientos">
+            <h2>Skills</h2>
+            <p>Tecnologias y lenguajes con los que he trabajado:</p>
+            <div class="skill-images">
+                <div class="skill-image">
+                    <img src="./assets/images/html-logo.png" />
+                    <p>HTML</p>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/css-logo.png" />
+                    <p>CSS</p>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/js-logo.png" />
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/nodejs-logo.png" />
+                    <p>Nodejs</p>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/express-logo.png" />
+                    <p>Express</p>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/react-logo.png" />
+                    <p>React</p>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/redux-logo.png" />
+                    <p>Redux</p>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/postgresql-logo.png" />
+                    <p>PostgreSQL</p>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/sequelize-logo.png" />
+                    <p>Sequelize</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ancla padding" id="proyectos">
+            <h2>Proyectos</h2>
+            <p>Proyectos realizados recientemente</p>
+            <div class="proyects">
+                <button class="proyects-prev">
+                    < </button>
+                        <button class="proyects-next"> > </button>
+                        <div class="proyect fade" id="1">
+                            <img src="./assets/images/universal-music1.jpeg" alt="">
+                            <div class="proyect-info">
+                                <h3>Universal Music</h3>
+                                <a href="https://github.com/KuraiRantan/PI-Foods" target="_blank">GitHub</a>
+                                <a href="https://universalmusic-henry.web.app/" target="_blank">Deploy</a>
+                                <p>Proyecto final del bootcamp SoyHenry realizado por un equipo de 7 integrantes. Es un
+                                    e-commerce para la venta de instrumentos musicales, construido con el stack PERN.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="proyect fade" id="2">
+                            <img src="./assets/images/el-tiempo1.png" alt="">
+                            <div class="proyect-info">
+                                <h3>El tiempo</h3>
+                                <a href="https://github.com/KuraiRantan/el-tiempo" target="_blank">GitHub</a>
+                                <a href="https://el-tiempo.vercel.app/" target="_blank">Deploy</a>
+                                <p>App del tiempo realizada utilizando la weather API y React en la que se pueden
+                                    consultar ciudades y como resultado se irán apilando a modo de cards incluyendo
+                                    datos como clima, temperatura, viento y coordenadas geográficas.</p>
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="contacto ancla" id="contacto">
+            <form id="form" name="form" class="form">
+                <h2>Contacto</h2>
+                <div id="loader" class="lds-facebook hidden">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <input type="text" name="nombre" placeholder="Nombre(s)" />
+                <input type="text" name="apellido" placeholder="Apellido(s)" />
+                <input type="email" name="email" placeholder="Email" />
+                <input type="text" name="asunto" placeholder="Asunto" />
+                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escriba su mensaje aqui..."></textarea>
+                <input type="submit" id="enviar" value="ENVIAR">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social">
+            <ul class="social-list">
+                <li><a href="https://www.linkedin.com/in/camargo-jorge/" target="_blank"><img
+                            src="./assets/icons/linkedin.svg" alt="GitHub"></a></li>
+                <li><a href="https://www.github.com/KuraiRantan" target="_blank"><img src="./assets/icons/github.svg"
+                            alt="LinkedIn"></a></li>
+            </ul>
+
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./index.js"></script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,427 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    background-color: #16182a;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    background-color: #0088cc;
+    margin-top: 4rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+h2 {
+    border-bottom: 2px solid #16cd74;
+    display: inline-block;
+}
+
+.padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.ancla::before {
+    display: block;
+    content: " ";
+    margin-top: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+@media screen and (min-width:768px) {
+    .ancla::before {
+        margin-top: -8rem;
+        height: 8rem;
+        visibility: hidden;
+    }
+}
+
+.active {
+    border-bottom: .2rem solid #16cd74;
+}
+
+.logo {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 0px;
+    z-index: 200;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+    height: 19rem;
+    background-color: #0088cc;
+    flex-direction: column;
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+}
+
+.header-menu-show {
+    transform: translateY(0);
+}
+
+@media screen and (min-width:768px) {
+    .logo {
+        position: static;
+    }
+
+    .header-menu {
+        justify-content: space-evenly;
+        flex-direction: row;
+        height: 8rem;
+        transform: translateY(0);
+    }
+}
+
+.sections-menu-icon {
+    width: 3.2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.sections-list,
+.social-list {
+    display: flex;
+    column-gap: 1rem;
+    list-style: none;
+    margin: 0;
+}
+
+.sections-list {
+    flex-direction: column;
+}
+
+@media screen and (min-width:768px) {
+
+    .sections-list,
+    .social-list {
+        flex-direction: row;
+    }
+
+    .sections-menu-icon {
+        display: none;
+    }
+}
+
+.inicio {
+    width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.inicio svg:last-child {
+    position: absolute;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+
+.inicio img:first-child {
+    object-fit: cover;
+    position: relative;
+    z-index: -100;
+    filter: blur(.3rem);
+    background-color: black;
+    opacity: .3;
+}
+
+.logo img {
+    width: 80px;
+    border-radius: 100%;
+}
+
+.span-cv {
+    background-color: #16cd74;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+.span-btn-open,
+.span-btn-download {
+    border: none;
+    background-color: inherit;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.span-btn-open:hover,
+.span-btn-download:hover {
+    color: #0088cc;
+}
+
+.span-btn-open {
+    border-right: 1px solid black;
+}
+
+
+.skill-images {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    row-gap: 4rem;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.skill-image {
+    width: 100px;
+    transition: all 0.2s ease-out;
+}
+
+.skill-image:hover {
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+.skill-image>img {
+    width: 100%;
+}
+
+.proyects {
+    position: relative;
+    /* padding: 40px 0; */
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.proyect {
+    display: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+
+}
+
+
+.proyect>img {
+    height: 30rem;
+    object-fit: fill;
+}
+
+@media screen and (min-width:768px) {
+    .proyect img {
+        width: 47%;
+    }
+
+    .padding {
+        margin: 0;
+    }
+
+    .proyect {
+        min-width: 100%;
+    }
+}
+
+.proyect a {
+    text-decoration: none;
+}
+
+.proyects-prev {
+    /* top: 50%; */
+    left: 0;
+}
+
+.proyects-next {
+    /* top: 50%; */
+    right: 0;
+}
+
+.proyects-prev,
+.proyects-next {
+    position: absolute;
+    height: 100%;
+    z-index: 100;
+    border: none;
+    background-color: transparent;
+    width: 3rem;
+    transition: all .2s ease-in-out;
+}
+
+.proyects-prev:hover,
+.proyects-next:hover {
+    color: wheat;
+    background-color: black;
+    opacity: .4;
+}
+
+.proyect-info {
+    width: 47%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.contacto {
+    margin-top: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+@media screen and (min-width:768px) {
+    .form {
+        width: 40%;
+    }
+}
+
+.form input,
+.form textarea {
+    display: block;
+    flex-basis: 100%;
+    border: none;
+    background-color: #16182a;
+    border-bottom: .2rem solid #16cd74;
+    color: #fff;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+}
+
+.form textarea {
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.form input:last-child {
+    padding: 1rem 0;
+    background-color: #16cd74;
+    border: none;
+    border-radius: .6rem;
+    color: #fff;
+    transition: opacity .2s ease-in;
+}
+
+.form input:last-child:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.social img {
+    width: 3.2rem;
+}
+
+
+/* loader email form */
+.lds-facebook {
+    display: inline;
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.lds-facebook div {
+    display: inline;
+    position: absolute;
+    width: 16px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+@keyframes lds-facebook {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+
+    50%,
+    100% {
+        top: 24px;
+        height: 32px;
+    }
+}
