@@ -13,7 +13,7 @@ const linksActiveHeader = () => {
             link.className = link.className.replaceAll(' active', '')
         }
         // obtén el valor del scroll
-        var scrollBar = window.scrollY + 80;
+        var scrollBar = window.scrollY + 85;
         // selecciona como seccion activa la última
         var activa = elements[elements.length - 1].id;
         // para todas las secciones
@@ -33,51 +33,51 @@ const linksActiveHeader = () => {
     });
 };
 
-const moveCarousell = () => {
-    const elements = document.querySelectorAll('.proyect');
-    for (let element of elements) {
-        element.style.display = "none";
-    }
-    indexCarousell = (indexCarousell >= elements.length - 1) ? 0 : indexCarousell + 1;
-    elements[indexCarousell].style.display = 'flex';
-};
+// const moveCarousell = () => {
+//     const elements = document.querySelectorAll('.proyect');
+//     for (let element of elements) {
+//         // element.style.display = "none";
+//     }
+//     indexCarousell = (indexCarousell >= elements.length - 1) ? 0 : indexCarousell + 1;
+//     // elements[indexCarousell].style.display = 'flex';
+// };
 
-const next = () => {
-    const btn = document.querySelector('.proyects-next');
-    btn.addEventListener('click', () => {
-        moveCarousell();
-    });
-};
+// const next = () => {
+//     const btn = document.querySelector('.proyects-next');
+//     btn.addEventListener('click', () => {
+//         moveCarousell();
+//     });
+// };
 
-const prev = () => {
+// const prev = () => {
 
-    const btn = document.querySelector('.proyects-prev');
-    btn.addEventListener('click', () => {
-        const elements = document.querySelectorAll('.proyect');
-        let currentIndex = -1;
-        for (let i = 0; i < elements.length; i++) {
-            if (elements[i].style.display !== 'none') currentIndex = i;
-            elements[i].style.display = "none";
-        }
+//     const btn = document.querySelector('.proyects-prev');
+//     btn.addEventListener('click', () => {
+//         const elements = document.querySelectorAll('.proyect');
+//         let currentIndex = -1;
+//         for (let i = 0; i < elements.length; i++) {
+//             if (elements[i].style.display !== 'none') currentIndex = i;
+//             elements[i].style.display = "none";
+//         }
 
-        indexCarousell = (currentIndex <= 0) ? elements.length - 1 : currentIndex - 1;
-        elements[indexCarousell].style.display = 'flex';
-    });
-};
+//         indexCarousell = (currentIndex <= 0) ? elements.length - 1 : currentIndex - 1;
+//         elements[indexCarousell].style.display = 'flex';
+//     });
+// };
 
-const mouseOver = () => {
-    const container = document.querySelector('.proyects');
-    container.addEventListener('mouseover', () => {
-        clearInterval(interval)
-    });
-};
+// const mouseOver = () => {
+//     const container = document.querySelector('.proyects');
+//     container.addEventListener('mouseover', () => {
+//         clearInterval(interval)
+//     });
+// };
 
-const mouseOut = () => {
-    const container = document.querySelector('.proyects');
-    container.addEventListener('mouseout', () => {
-        interval = setInterval(moveCarousell, 4000);
-    });
-};
+// const mouseOut = () => {
+//     const container = document.querySelector('.proyects');
+//     container.addEventListener('mouseout', () => {
+//         interval = setInterval(moveCarousell, 4000);
+//     });
+// };
 
 const toogleMenu = () => {
     const menuIcon = document.querySelector('.sections-menu-icon');
@@ -179,14 +179,14 @@ const addPdf = () => {
     spanCv.appendChild(linkDownload);
 };
 
-mouseOver();
-mouseOut();
+// mouseOver();
+// mouseOut();
 linksActiveHeader();
 toogleMenu();
 closeMenu();
-next();
-prev();
-moveCarousell();
+// next();
+// prev();
+// moveCarousell();
 sendMail();
 addPdf();
-interval = setInterval(moveCarousell, 4000);
+// interval = setInterval(moveCarousell, 4000);
