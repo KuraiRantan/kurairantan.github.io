@@ -49,7 +49,7 @@ h2 {
 
 @media screen and (min-width:768px) {
     .ancla::before {
-        margin-top: -8rem;
+        /* margin-top: -8rem; */
         height: 8rem;
         visibility: hidden;
     }
@@ -150,6 +150,15 @@ header {
     text-align: center;
     overflow: hidden;
 }
+
+@media screen and (min-width:768px) {
+
+    .inicio {
+        max-height: calc(100vh - 80px);
+        min-height: calc(100vh - 80px);
+    }
+}
+
 
 .inicio svg:last-child {
     position: absolute;

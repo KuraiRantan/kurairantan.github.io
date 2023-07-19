@@ -10,7 +10,7 @@ const linksActiveHeader = () => {
         // console.log($(".section-list a"))
         // $(".sections-list a").removeClass("active");
         for (let link of links) {
-            link.className = link.className.replaceAll(' active', '')
+            link.className = link.className.replaceAll('active', '')
         }
         // obtén el valor del scroll
         var scrollBar = window.scrollY + 85;
