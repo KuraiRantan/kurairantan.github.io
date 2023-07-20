@@ -44,36 +44,36 @@
     <main>
         <div class="ancla" id="inicio">
 
-            <div class="inicio" >
+            <div class="inicio">
                 <img src="./assets/images/logo-inicio.png" alt="imagen inicio">
                 <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 435 50'
                     style='background-color: #00000000;' width='700px' height='50px'>
-    
-    
+
+
                     <path id='path0'>
                         <animate id='d0' attributeName='d' begin='0s;d1.end' dur='6000ms'
                             values='m0,25 h0 ; m0,25 h435 ; m0,25 h435 ; m0,25 h0'
                             keyTimes='0;0.66666666666667;0.83333333333333;1' />
                     </path>
-                    <text font-family='"Fira code", monospace' fill='#fff' font-size='22' dominant-baseline='middle' x='50%'
-                        text-anchor='middle'>
+                    <text font-family='"Fira code", monospace' fill='#fff' font-size='22' dominant-baseline='middle'
+                        x='50%' text-anchor='middle'>
                         <textPath xlink:href='#path0'>
                             Hola, soy Jorge Camargo
                         </textPath>
                     </text>
-    
+
                     <path id='path1'>
                         <animate id='d1' attributeName='d' begin='d0.end' dur='6000ms'
                             values='m0,25 h0 ; m0,25 h435 ; m0,25 h435 ; m0,25 h0'
                             keyTimes='0;0.66666666666667;0.83333333333333;1' />
                     </path>
-                    <text font-family='"Fira code", monospace' fill='#fff' font-size='20' dominant-baseline='middle' x='50%'
-                        text-anchor='middle'>
+                    <text font-family='"Fira code", monospace' fill='#fff' font-size='20' dominant-baseline='middle'
+                        x='50%' text-anchor='middle'>
                         <textPath xlink:href='#path1'>
                             Desarrollador FullStack
                         </textPath>
                     </text>
-    
+
                 </svg>
             </div>
         </div>
@@ -135,75 +135,185 @@
                     <img src="./assets/images/java-logo.png" />
                     <p>Java</p>
                 </div>
+                <div class="skill-image">
+                    <img src="./assets/images/vue-logo.png" />
+                    <p>Vue</p>
+                </div>
             </div>
+        </div>
+
+        <div>
+            
         </div>
 
         <div class="ancla padding" id="proyectos">
             <h2>Proyectos</h2>
-            <p>Proyectos realizados recientemente</p>
+            <p>Algunos proyectos realizados:</p>
             <div class="proyects">
                 <!-- <button class="proyects-prev">
                     < </button>
                         <button class="proyects-next"> > </button> -->
-                <div class="proyect fade" id="1">
-                    <img src="./assets/images/pi-foods.png" alt="">
-                    <div class="proyect-info">
-                        <h3>PI foods</h3>
-                        <a href="https://github.com/KuraiRantan/PI-Foods" target="_blank">GitHub</a>
-                        <a href="https://pi-foods-nu.vercel.app/" target="_blank">Deploy</a>
-                        <p>Single Page Application(SPA) en la cual se pueden ver distintas recetas de comida
-                            junto con información relevante de las mismas, entre otras cosas puedes:</p>
-                        <ul>
-                            <li>Buscar recetas.</li>
-                            <li>Filtrarlos / Ordenarlos.</li>
-                            <li>Crear nuevas recetas propias.</li>
-                        </ul>
-                        <p>Fue construida con React, Redux, Node y Sequelize con el objetivo de afirmar y
-                            conectar los conceptos aprendidos en la carrera, aprender mejores prácticas.</p>
-                    </div>
-                </div>
-                <div class="proyect fade" id="2">
-                    <img src="./assets/images/generador-plantillas.png" alt="">
-                    <div class="proyect-info">
-                        <h3>Generador de archivos mediante plantilla</h3>
-                        <a href="https://github.com/KuraiRantan/generador-documentos" target="_blank">GitHub</a>
-                        <span class="span-executable">Descargar:<a class="span-btn-download" href="setups/generador-de-archivos" download>Linux</a><a class="span-btn-download" href="setups/generador-de-archivos.exe" download>Windows</a></span>
-                        <p>Aplicación de escritorio usando Python y Tkinter en la cual por medio de una plantilla en documento *.docx y teniendo un archivo *.txt con los datos que se reemplazaran en la plantilla, el resultado seran la misma cantidad de filas del documento de datos los cuales podran guardarse como *.docx o *.pdf.</p>
-                    </div>
-                </div>
-                <div class="proyect fade" id="3">
-                    <img src="./assets/images/universal-music1.jpeg" alt="">
-                    <div class="proyect-info">
-                        <h3>Universal Music</h3>
-                        <a href="https://github.com/KuraiRantan/PI-Foods" target="_blank">GitHub</a>
-                        <a href="https://universalmusic-henry.web.app/" target="_blank">Deploy</a>
-                        <p>Proyecto final del bootcamp SoyHenry realizado por un equipo de 7 integrantes. Es un
-                            e-commerce para la venta de instrumentos musicales, construido con el stack PERN.
-                        </p>
-                    </div>
-                </div>
-                <div class="proyect fade" id="4">
-                    <img src="./assets/images/el-tiempo1.png" alt="">
-                    <div class="proyect-info">
-                        <h3>El tiempo</h3>
-                        <a href="https://github.com/KuraiRantan/el-tiempo" target="_blank">GitHub</a>
-                        <a href="https://el-tiempo.vercel.app/" target="_blank">Deploy</a>
-                        <p>App del tiempo realizada utilizando la weather API y React en la que se pueden
-                            consultar ciudades y como resultado se irán apilando a modo de cards incluyendo
-                            datos como clima, temperatura, viento y coordenadas geográficas.</p>
-                    </div>
-                </div>
-                <div class="proyect fade" id="5">
-                    <img src="./assets/images/inventario.png" alt="">
-                    <div class="proyect-info">
-                        <h3>Inventario</h3>
-                        <a href="https://res.cloudinary.com/di6mevrkr/video/upload/v1670156966/inventario_kbgjvz.mp4"
-                            target="_blank">Ver video</a>
-                        <p>Aplicación de escritorio usando Visual Basic y Access en la cual se generan tanto
-                            entradas
-                            como salidas de productos, manejo de inventaro y cuentas basicas.</p>
-                    </div>
-                </div>
+                        <div class="lenguaje">
+                            <div class="dropdown-lang" data-lang="javascript">
+                                <span data-lang="javascript">JavaScript - NodeJs</span>
+                                <span data-lang="javascript"><i class="fa-solid fa-caret-down" data-lang="javascript"></i></span>
+                            </div>
+                            <div class="proyect-cards dropdown-open" id="javascript-cards" data-div-cards>
+                                <div class="card-proyect">
+                                    <img src="./assets/images/pi-foods.png" alt="">
+                                    <div class="card-details">
+                                        <h3>PI foods</h3>
+                                        <div class="tags">
+                                            <span class="tag">React</span>
+                                            <span class="tag">Redux</span>
+                                            <span class="tag">NodeJs</span>
+                                            <span class="tag">Express</span>
+                                            <span class="tag">Sequelize</span>
+                                            <span class="tag">PostgreSQL</span>
+                                        </div>
+            
+                                        <a href="https://github.com/KuraiRantan/PI-Foods" target="_blank" class="link-icons">
+                                            <i class="fa-brands fa-github fa-xl"></i>
+                                        </a>
+                                        <a href="https://pi-foods-nu.vercel.app/" target="_blank" class="link-icons">
+                                            <i class="fa-solid fa-rocket fa-xl"></i>
+                                        </a>
+                                        <p>Single Page Application(SPA) en la cual se pueden ver distintas recetas de comida
+                                            junto con información relevante de las mismas, entre otras cosas puedes:</p>
+                                        <ul>
+                                            <li>Buscar recetas.</li>
+                                            <li>Filtrarlos / Ordenarlos.</li>
+                                            <li>Crear nuevas recetas propias.</li>
+                                        </ul>
+                                        <p>Fue construida con React, Redux, Node y Sequelize con el objetivo de afirmar y
+                                            conectar los conceptos aprendidos en la carrera, aprender mejores prácticas.</p>
+            
+                                    </div>
+                                </div>
+            
+                                <div class="card-proyect">
+                                    <img src="./assets/images/universal-music1.jpeg" alt="">
+                                    <div class="card-details">
+                                        <h3>Universal Music</h3>
+                                        <div class="tags">
+                                            <span class="tag">React</span>
+                                            <span class="tag">Redux</span>
+                                            <span class="tag">NodeJs</span>
+                                            <span class="tag">Express</span>
+                                            <span class="tag">Sequelize</span>
+                                            <span class="tag">PostgreSQL</span>
+                                            <span class="tag">React-pdf-renderer</span>
+                                            <span class="tag">Tailwind CSS</span>
+                                            <span class="tag">Stripe</span>
+                                        </div>
+            
+                                        <a href="https://github.com/KuraiRantan/PI-Foods" target="_blank" class="link-icons">
+                                            <i class="fa-brands fa-github fa-xl"></i>
+                                        </a>
+                                        <a href="https://universalmusic-henry.web.app/" target="_blank" class="link-icons">
+                                            <i class="fa-solid fa-rocket fa-xl"></i>
+                                        </a>
+                                        <p>Proyecto final del bootcamp SoyHenry realizado por un equipo de 7 integrantes. Es un
+                                            e-commerce para la venta de instrumentos musicales, construido con el stack PERN.
+                                        </p>
+                                    </div>
+                                </div>
+            
+                                <div class="card-proyect" id="4">
+                                    <img src="./assets/images/el-tiempo1.png" alt="">
+                                    <div class="card-details">
+                                        <h3>El tiempo</h3>
+                                        <div class="tags">
+                                            <span class="tag">React</span>
+                                        </div>
+            
+                                        <a href="https://github.com/KuraiRantan/el-tiempo" target="_blank" class="link-icons">
+                                            <i class="fa-brands fa-github fa-xl"></i>
+                                        </a>
+                                        <a href="https://el-tiempo.vercel.app/" target="_blank" class="link-icons">
+                                            <i class="fa-solid fa-rocket fa-xl"></i>
+                                        </a>
+                                        <p>App del tiempo realizada utilizando la weather API y React en la que se pueden
+                                            consultar ciudades y como resultado se irán apilando a modo de cards incluyendo
+                                            datos como clima, temperatura, viento y coordenadas geográficas.</p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+            
+                        <div class="lenguaje">
+                            <div class="dropdown-lang" data-lang="python">
+                                <span data-lang="python">Python</span>
+                                <span data-lang="python"><i class="fa-solid fa-caret-down" data-lang="python"></i></span>
+                            </div>
+                            <div class="proyect-cards" id="python-cards" data-div-cards>
+                                <div class="card-proyect">
+                                    <img src="./assets/images/generador-plantillas.png" alt="">
+                                    <div class="card-details">
+                                        <h3>Generador de archivos mediante plantilla</h3>
+                                        <div class="tags">
+                                            <span class="tag">PyMuPDF</span>
+                                            <span class="tag">python-docx</span>
+                                            <span class="tag">Tkinter</span>
+                                        </div>
+                                        <a href="https://github.com/KuraiRantan/generador-documentos" target="_blank" class="link-icons">
+                                            <i class="fa-brands fa-github fa-xl"></i>
+                                        </a>
+                                        <span class="span-executable">Descargar:
+                                            <a class="span-btn-download" href="setups/generador-de-archivos" download>
+                                                <i class="fa-brands fa-linux"></i>
+                                            </a>
+                                            <a class="span-btn-download" href="setups/generador-de-archivos.exe" download>
+                                                <i class="fa-brands fa-windows"></i>
+                                            </a>
+                                        </span>
+                                        <p>Aplicación de escritorio usando Python y Tkinter en la cual por medio de una plantilla en
+                                            documento *.docx y teniendo un archivo *.txt con los datos que se reemplazaran en la
+                                            plantilla, el resultado seran la misma cantidad de filas del documento de datos los
+                                            cuales
+                                            podran guardarse como *.docx o *.pdf.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="lenguaje">
+                            <div class="dropdown-lang" data-lang="java">
+                                <span data-lang="java">Java</span>
+                                <span data-lang="java"><i class="fa-solid fa-caret-down" data-lang="java"></i></span>
+                            </div>
+                            <div class="proyect-cards" id="java-cards" data-div-cards>
+                                <p>Pendiente por subir</p>
+                            </div>
+                        </div>
+            
+                        <div class="lenguaje">
+                            <div class="dropdown-lang" data-lang="visualbasic">
+                                <span data-lang="visualbasic">VisualBasic</span>
+                                <span data-lang="visualbasic"><i class="fa-solid fa-caret-down" data-lang="visualbasic"></i></span>
+                            </div>
+                            <div class="proyect-cards" id="visualbasic-cards" data-div-cards>
+                                <div class="card-proyect" id="5">
+                                    <img src="./assets/images/inventario.png" alt="">
+                                    <div class="card-details">
+                                        <h3>Inventario</h3>
+                                        <div class="tags">
+                                            <span class="tag">MariaDB</span>
+                                            <span class="tag">GunaUI</span>
+                                            <span class="tag">WinForms</span>
+                                        </div>
+            
+                                        <a href="https://res.cloudinary.com/di6mevrkr/video/upload/v1689886531/effwmswmfziuunuxng8q.mp4" target="_blank" class="link-icons">
+                                            <i class="fa-solid fa-video fa-xl"></i>
+                                        </a>
+                                        <p>Aplicación de escritorio usando Visual Basic y Access en la cual se generan tanto
+                                            entradas
+                                            como salidas de productos, manejo de inventaro y cuentas basicas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
             </div>
         </div>
@@ -240,8 +350,10 @@
     </footer>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./index.js"></script>
-    </script>
 </body>
 
 </html>

@@ -164,13 +164,13 @@ const addPdf = () => {
     const linkDownload = document.createElement('a'); 
 
     linkOpen.className = 'span-btn-open';
-    linkOpen.innerHTML = 'ABRIR';
+    linkOpen.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i>';
     
     linkOpen.href = './assets/pdf/af54f5gh1f5g4h5f.pdf';
     linkOpen.target = '_blank';
 
     linkDownload.className = 'span-btn-download';
-    linkDownload.innerHTML = 'DESCARGAR';
+    linkDownload.innerHTML = '<i class="fa-solid fa-download"></i>';
 
     linkDownload.href = './assets/pdf/af54f5gh1f5g4h5f.pdf';
     linkDownload.download = 'jorge-camargo-cv';
@@ -179,11 +179,45 @@ const addPdf = () => {
     spanCv.appendChild(linkDownload);
 };
 
+
+const dropDownClick = () => {
+    const dropdownLangs = document.querySelectorAll('.dropdown-lang');
+    dropdownLangs.forEach((dropdownLang) => {
+        dropdownLang.addEventListener('click', (e) => {
+            const divsCards = document.querySelectorAll('[data-div-cards]')
+            const idDiv = `${e.target.getAttribute('data-lang')}-cards`
+            const divCards = document.querySelector(`#${idDiv}`)
+            divsCards.forEach((div) => {
+                const maxHeight = div.scrollHeight;
+                const height = div.offsetHeight;
+                if(div.id === idDiv && height === 0){
+                    div.style.maxHeight = (maxHeight + 1000) + 'px'
+                } else {
+                    div.style.maxHeight = 0
+                }
+            })
+            
+            setTimeout(() => {
+                const scrollPosition = window.screenY + e.target.offsetTop - e.clientY - 20
+                e.target.scrollIntoView({behavior: 'smooth', block: 'center'})
+            }, 600);
+        })
+    })
+
+}
+
+const initialHeightProyect = () => {
+    const div = document.querySelector('#javascript-cards')
+    div.style.maxHeight = ( div.scrollHeight + 1000) + 'px'
+}
+
 // mouseOver();
 // mouseOut();
 linksActiveHeader();
 toogleMenu();
 closeMenu();
+dropDownClick();
+initialHeightProyect();
 // next();
 // prev();
 // moveCarousell();

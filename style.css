@@ -187,16 +187,18 @@ header {
 
 .span-cv {
     background-color: #16cd74;
-    padding: 0px 10px;
+    padding: .5rem 1rem;
     border-radius: 10px;
 }
 
 .span-btn-open,
 .span-btn-download {
+    padding-left: 3rem;
+    padding-right: 3rem;
     border: none;
     background-color: inherit;
-    padding-left: 10px;
-    padding-right: 10px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -241,22 +243,93 @@ header {
     width: 100%;
 }
 
+/* INICIO MODIFICACIONES */
+
+.dropdown-lang {
+    background-color: #0088cc;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: .7rem 1rem;
+    border-bottom: .4rem solid transparent;
+    /* transition: border-color 0.3s ease-in; */
+}
+
+.dropdown-lang:hover {
+    border-bottom: .4rem solid #16cd74;
+}
+
+/* .dropdown-open{
+    max-height: 6000px !important;
+    transition: max-height 5s ease-in;
+} */
+
+.lenguaje {
+    margin-bottom: 1rem;
+}
+
+.lenguaje:last-of-type {
+    margin-bottom: 0;
+}
+
+.proyect-cards {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1000px));
+    justify-content: center;
+    gap: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .6s ease-in;
+}
+
+.card-proyect {
+    /* width: 94%; */
+    /* height: 600px; */
+    border-radius: 1rem;
+    border: 1px solid #16cd74;
+}
+
+.card-proyect img {
+    border-radius: 1rem;
+    width: calc(100% - 0.2rem);
+    padding: .1rem;
+}
+
+.card-details {
+    padding: 0 2rem;
+}
+
+.tag {
+    background-color: aqua;
+    color: black;
+    padding: .4rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    user-select: none;
+}
+
+.link-icons {
+    text-decoration: none;
+    color: #a6c2f2;
+}
+
+
+/* FIN MODIFICACIONES */
+
 .proyects {
     /* position: relative; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2%;
     /* padding: 40px 0; */
-    
+
 }
 
 .proyect {
     width: 100%;
-    /* display: none; */
-    /* flex-wrap: wrap; */
-    /* gap: 1rem; */
-    /* justify-content: space-between; */
 
 }
 
@@ -293,8 +366,9 @@ header {
 
 .span-executable {
     background-color: #16cd74;
-    padding: 10px 10px;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: inline-block;
 }
 
 /* .proyects-prev {
