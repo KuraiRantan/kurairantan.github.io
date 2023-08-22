@@ -282,7 +282,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1000px));
     justify-content: center;
     gap: 1rem;
-    max-height: 0;
+    /* max-height: 0; */
     overflow: hidden;
     transition: max-height .6s ease-in;
 }

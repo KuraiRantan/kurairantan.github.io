@@ -216,8 +216,8 @@ const initialHeightProyect = () => {
 linksActiveHeader();
 toogleMenu();
 closeMenu();
-dropDownClick();
-initialHeightProyect();
+// dropDownClick();
+// initialHeightProyect();
 // next();
 // prev();
 // moveCarousell();
