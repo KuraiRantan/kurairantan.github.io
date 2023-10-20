@@ -1,5 +1,6 @@
 let indexCarousell = -1
 let interval;
+window.maxHeight = 0;
 
 const linksActiveHeader = () => {
     const elements = document.querySelectorAll('.ancla');
@@ -104,7 +105,7 @@ const sendMail = () => {
         const form = document.querySelector('#form');
         const loader = document.querySelector('#loader');
 
-        if(!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(form[2].value.trim())) return Swal.fire({
+        if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(form[2].value.trim())) return Swal.fire({
             icon: 'error',
             text: 'El email es invalido'
         });
@@ -161,11 +162,11 @@ const addPdf = () => {
     const spanCv = document.querySelector('.span-cv');
 
     const linkOpen = document.createElement('a');
-    const linkDownload = document.createElement('a'); 
+    const linkDownload = document.createElement('a');
 
     linkOpen.className = 'span-btn-open';
     linkOpen.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i>';
-    
+
     linkOpen.href = './assets/pdf/af54f5gh1f5g4h5f.pdf';
     linkOpen.target = '_blank';
 
@@ -188,27 +189,61 @@ const dropDownClick = () => {
             const idDiv = `${e.target.getAttribute('data-lang')}-cards`
             const divCards = document.querySelector(`#${idDiv}`)
             divsCards.forEach((div) => {
-                const maxHeight = div.scrollHeight;
-                const height = div.offsetHeight;
-                if(div.id === idDiv && height === 0){
-                    div.style.maxHeight = (maxHeight + 1000) + 'px'
+                // const maxHeight = div.scrollHeight;
+                // const height = div.offsetHeight;
+                if (div.id === idDiv) {
+                    // div.style.maxHeight = (maxHeight + 1000) + 'px'
+                    if (Array.from(div.classList).includes('dropdown-open')) {
+                        div.classList.remove('dropdown-open');
+                        div.classList.add('dropdown-close');
+                        div.style.maxHeight = `0`;
+                    } else {
+                        const navHeight = document.querySelector('.header-menu').offsetHeight;
+                        div.classList.add('dropdown-open');
+                        div.classList.remove('dropdown-close');
+                        div.style.maxHeight = window.maxHeight;
+                    }
+
                 } else {
-                    div.style.maxHeight = 0
+                    // div.classList.add('dropdown-close');
+                    // div.classList.remove('dropdown-open');
+                    // div.style.maxHeight = `0`;
                 }
             })
-            
-            setTimeout(() => {
-                const scrollPosition = window.screenY + e.target.offsetTop - e.clientY - 20
-                e.target.scrollIntoView({behavior: 'smooth', block: 'center'})
-            }, 600);
+
+            // setTimeout(() => {
+            //     window.location.hash = `#${idDiv}`
+                
+            // }, 600);
+            // console.log(idDiv)
+            // setTimeout(() => {
+            //     const scrollPosition = window.screenY + e.target.offsetTop - e.clientY - 20
+            //     e.target.scrollIntoView({behavior: 'smooth', block: 'center'})
+            // }, 600);
         })
     })
 
 }
 
+
+window.addEventListener('load', function () {
+    // Tu código aquí se ejecutará cuando todo el documento y sus recursos se hayan cargado completamente.
+    // Esto incluye imágenes, hojas de estilo, scripts, etc.
+    const proyects = this.document.querySelectorAll('.proyect-cards');
+    window.maxHeight = `${Array.from(proyects).reduce((prev, value) => (value.offsetHeight > prev) ? value.offsetHeight : prev, 0) + 10000}px`;
+    proyects.forEach((v, k) => {
+        // if (k === 0) {
+            // v.classList.add('dropdown-open');
+        // } else {
+            v.classList.add('dropdown-close');
+        // }
+
+
+    })
+});
 const initialHeightProyect = () => {
     const div = document.querySelector('#javascript-cards')
-    div.style.maxHeight = ( div.scrollHeight + 1000) + 'px'
+    div.style.maxHeight = (div.scrollHeight + 1000) + 'px'
 }
 
 // mouseOver();
@@ -216,7 +251,7 @@ const initialHeightProyect = () => {
 linksActiveHeader();
 toogleMenu();
 closeMenu();
-// dropDownClick();
+dropDownClick();
 // initialHeightProyect();
 // next();
 // prev();

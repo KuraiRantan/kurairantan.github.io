@@ -261,12 +261,24 @@ header {
 
 .dropdown-lang:hover {
     border-bottom: .4rem solid #16cd74;
+    
 }
 
-/* .dropdown-open{
-    max-height: 6000px !important;
-    transition: max-height 5s ease-in;
-} */
+.dropdown-open{
+    visibility: visible;
+  opacity: 1;
+  /* max-height: 900000px; Establece un valor grande para max-height */
+  transition: opacity .3s ease-out, max-height .3s ease-out, visibility .3s ease-out !important;
+}
+
+.dropdown-close{
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0; /* Establece max-height a 0 para ocultar el contenido */
+    pointer-events: none; /* Evitar interacción con elementos ocultos */
+  /* transition: opacity .6s ease, max-height .6s ease, visibility .6s ease !important; */
+
+}
 
 .lenguaje {
     margin-bottom: 1rem;
@@ -284,7 +296,7 @@ header {
     gap: 1rem;
     /* max-height: 0; */
     overflow: hidden;
-    transition: max-height .6s ease-in;
+    transition: max-height .3s ease-in;
 }
 
 .card-proyect {
