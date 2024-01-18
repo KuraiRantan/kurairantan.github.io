@@ -127,14 +127,14 @@
                     <img src="./assets/images/sequelize-logo.png" />
                     <p>Sequelize</p>
                 </div>
-                <div class="skill-image">
+                <!-- <div class="skill-image">
                     <img src="./assets/images/python-logo.png" />
                     <p>Python</p>
                 </div>
                 <div class="skill-image">
                     <img src="./assets/images/java-logo.png" />
                     <p>Java</p>
-                </div>
+                </div> -->
                 <div class="skill-image">
                     <img src="./assets/images/vue-logo.png" />
                     <p>Vue</p>
@@ -150,46 +150,77 @@
             <h2>Proyectos</h2>
             <p>Algunos proyectos realizados:</p>
             <div class="proyects">
-                <!-- <button class="proyects-prev">
-                    < </button>
-                        <button class="proyects-next"> > </button> -->
-                        <div class="lenguaje">
-                            <div class="dropdown-lang" data-lang="javascript">
-                                <span data-lang="javascript">JavaScript - NodeJs</span>
-                                <span data-lang="javascript"><i class="fa-solid fa-caret-down" data-lang="javascript"></i></span>
-                            </div>
-                            <div class="proyect-cards" id="javascript-cards" data-div-cards>
-                                <div class="card-proyect">
-                                    <img src="./assets/images/nexulink.png" alt="">
-                                    <div class="card-details">
-                                        <h3>NexuLink</h3>
-                                        <div class="tags">
-                                            <span class="tag">Vue JS</span>
-                                            <span class="tag">Vuex</span>
-                                            <span class="tag">NodeJs</span>
-                                            <span class="tag">Express</span>
-                                            <span class="tag">Sequelize</span>
-                                            <span class="tag">PostgreSQL</span>
-                                            <span class="tag">Socket IO</span>
-                                            <span class="tag">En desarrollo...</span>
 
-                                        </div>
-            
-                                        <a href="https://github.com/KuraiRantan/social-client" target="_blank" class="link-icons">
-                                            <i class="fa-brands fa-github fa-xl"></i>
-                                        </a>
-                                        <a href="https://nexu-link.vercel.app/#/" target="_blank" class="link-icons">
-                                            <i class="fa-solid fa-rocket fa-xl"></i>
-                                        </a>
-                                        <p>Proyecto tipo red social(aun en desarrollo) realizado con el fin de poner en práctica los conceptos adquiridos en Vue, Vuex y WebSockets por medio de Socket IO, además de seguir puliendo mis habilidades en Express y el ORM Sequelize.</p>
-                                        
-                                        
+
+                <div class="proyects2">
+                    <div class="full">
+
+                        <div class="card-proyect2">
+                            <img src="./assets/images/nexulink.png" alt="">
+                            <div class="card-details2">
+                                <button class="btn-prev-carousel" onclick="prev()"><i class="fa-solid fa-arrow-left"></i></button>
+                                <div class="wrapper">
+
+                                    <h3>NexuLink</h3>
+                                    <div class="tags">
+                                        <span class="tag">Vue JS</span>
+                                        <span class="tag">Vuex</span>
+                                        <span class="tag">NodeJs</span>
+                                        <span class="tag">Express</span>
+                                        <span class="tag">Sequelize</span>
+                                        <span class="tag">PostgreSQL</span>
+                                        <span class="tag">Socket IO</span>
+                                        <span class="tag">En desarrollo...</span>
             
                                     </div>
-                                </div>
-                                <div class="card-proyect">
-                                    <img src="./assets/images/pi-foods.png" alt="">
-                                    <div class="card-details">
+                               
+                                    <div class="source-container">
+
+                                        <div class="source-proyect">
+                                            <span>FRONTEND</span>
+                                            <a
+                                              href="https://github.com/KuraiRantan/social-client"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-brands fa-github fa-xl"></i>
+                                            </a>
+                                            <a
+                                              href="https://nexu-link.vercel.app/#/"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-solid fa-rocket fa-xl"></i>
+                                            </a>
+                                        </div>
+                                        <div class="source-proyect">
+                                            <span>BACKEND</span>
+                                            <a 
+                                            href="https://github.com/KuraiRantan/social-api"
+                                            target="_blank"
+                                            class="link-icons"
+                                            >
+                                            <i class="fa-brands fa-github fa-xl"></i>
+                                            </a>
+                                            <a href="https://nexu-link-api.onrender.com" target="_blank" class="link-icons">
+                                                <i class="fa-solid fa-rocket fa-xl"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                        <p>Proyecto tipo red social(aun en desarrollo) realizado con el fin de poner en práctica los conceptos adquiridos en Vue, Vuex y WebSockets por medio de Socket IO, además de seguir puliendo mis habilidades en Express y el ORM Sequelize.</p>
+                                
+                                    </div>
+                                 <button class="btn-next-carousel" onclick="next()"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+    
+                        <div class="card-proyect2">
+
+                                <img src="./assets/images/pi-foods.png" alt="">
+                                <div class="card-details2">
+                                    <button class="btn-prev-carousel" onclick="prev()"><i class="fa-solid fa-arrow-left"></i></button>
+                                    <div class="wrapper">
+
                                         <h3>PI foods</h3>
                                         <div class="tags">
                                             <span class="tag">React</span>
@@ -200,12 +231,42 @@
                                             <span class="tag">PostgreSQL</span>
                                         </div>
             
-                                        <a href="https://github.com/KuraiRantan/PI-Foods" target="_blank" class="link-icons">
-                                            <i class="fa-brands fa-github fa-xl"></i>
-                                        </a>
-                                        <a href="https://pi-foods-nu.vercel.app/" target="_blank" class="link-icons">
-                                            <i class="fa-solid fa-rocket fa-xl"></i>
-                                        </a>
+                                        <div class="source-container">
+                                        <div class="source-proyect">
+                                            <span>FRONTEND</span>
+                                            <a
+                                              href="https://github.com/KuraiRantan/PI-Foods/tree/main/client"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-brands fa-github fa-xl"></i>
+                                            </a>
+                                            <a
+                                              href="https://pi-foods-nu.vercel.app/"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-solid fa-rocket fa-xl"></i>
+                                            </a>
+                                          </div>
+                                          <div class="source-proyect">
+                                            <span>BACKEND</span>
+                                            <a
+                                              href="https://github.com/KuraiRantan/PI-Foods/tree/main/api"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-brands fa-github fa-xl"></i>
+                                            </a>
+                                            <a
+                                              href="https://food-book-api.vercel.app/"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-solid fa-rocket fa-xl"></i>
+                                            </a>
+                                          </div>
+                                          </div>
                                         <p>Single Page Application(SPA) en la cual se pueden ver distintas recetas de comida
                                             junto con información relevante de las mismas, entre otras cosas puedes:</p>
                                         <ul>
@@ -217,11 +278,19 @@
                                             conectar los conceptos aprendidos en la carrera, aprender mejores prácticas.</p>
             
                                     </div>
-                                </div>
-            
-                                <div class="card-proyect">
-                                    <img src="./assets/images/universal-music1.jpeg" alt="">
-                                    <div class="card-details">
+                                    <button class="btn-next-carousel" onclick="next()"><i class="fa-solid fa-arrow-right"></i></button>
+
+
+                            </div>
+                        </div>
+    
+                        <div class="card-proyect2">
+
+                                <img src="./assets/images/universal-music1.jpeg" alt="">
+                                <div class="card-details2">
+                                    <button class="btn-prev-carousel" onclick="prev()"><i class="fa-solid fa-arrow-left"></i></button>
+                                    <div class="wrapper">
+
                                         <h3>Universal Music</h3>
                                         <div class="tags">
                                             <span class="tag">React</span>
@@ -235,114 +304,89 @@
                                             <span class="tag">Stripe</span>
                                         </div>
             
-                                        <a href="https://github.com/KuraiRantan/PI-Foods" target="_blank" class="link-icons">
-                                            <i class="fa-brands fa-github fa-xl"></i>
-                                        </a>
-                                        <a href="https://universalmusic-henry.web.app/" target="_blank" class="link-icons">
-                                            <i class="fa-solid fa-rocket fa-xl"></i>
-                                        </a>
+                                        <div class="source-container">
+                                        <div class="source-proyect">
+                                            <span>FRONTEND</span>
+                                            <a
+                                              href="https://github.com/KuraiRantan/client-pf-ecommerce"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-brands fa-github fa-xl"></i>
+                                            </a>
+                                            <!-- <a
+                                              href="https://universalmusic-henry.web.app/"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-solid fa-rocket fa-xl"></i>
+                                            </a> -->
+                                          </div>
+                                          <div class="source-proyect">
+                                            <span>BACKEND</span>
+                                            <a 
+                                                href="https://github.com/KuraiRantan/api-pf-ecommerce" 
+                                                target="_blank"
+                                                class="link-icons"
+                                            >
+                                                <i class="fa-brands fa-github fa-xl"></i>
+                                            </a>
+                                          </div>
+                                        </div>
                                         <p>Proyecto final del bootcamp SoyHenry realizado por un equipo de 7 integrantes. Es un
                                             e-commerce para la venta de instrumentos musicales, construido con el stack PERN.
                                         </p>
                                     </div>
+                                    <button class="btn-next-carousel" onclick="next()"><i class="fa-solid fa-arrow-right"></i></button>
                                 </div>
-            
-                                <div class="card-proyect" id="4">
-                                    <img src="./assets/images/el-tiempo1.png" alt="">
-                                    <div class="card-details">
+                        </div>
+    
+                        <div class="card-proyect2" id="4">
+
+                                <img src="./assets/images/el-tiempo1.png" alt="">
+                                <div class="card-details2">
+                                    <button class="btn-prev-carousel" onclick="prev()"><i class="fa-solid fa-arrow-left"></i></button>
+                                    <div class="wrapper">
+
                                         <h3>El tiempo</h3>
                                         <div class="tags">
                                             <span class="tag">React</span>
                                         </div>
             
-                                        <a href="https://github.com/KuraiRantan/el-tiempo" target="_blank" class="link-icons">
-                                            <i class="fa-brands fa-github fa-xl"></i>
-                                        </a>
-                                        <a href="https://el-tiempo.vercel.app/" target="_blank" class="link-icons">
-                                            <i class="fa-solid fa-rocket fa-xl"></i>
-                                        </a>
+                                        <div class="source-container">
+                                        <div class="source-proyect">
+                                            <span>FRONTEND</span>
+                                            <a
+                                              href="https://github.com/KuraiRantan/el-tiempo"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-brands fa-github fa-xl"></i>
+                                            </a>
+                                            <a
+                                              href="https://el-tiempo.vercel.app/"
+                                              target="_blank"
+                                              class="link-icons"
+                                            >
+                                              <i class="fa-solid fa-rocket fa-xl"></i>
+                                            </a>
+                                          </div>
+                                        </div>
                                         <p>App del tiempo realizada utilizando la weather API y React en la que se pueden
                                             consultar ciudades y como resultado se irán apilando a modo de cards incluyendo
                                             datos como clima, temperatura, viento y coordenadas geográficas.</p>
                                     </div>
+                                    <button class="btn-next-carousel" onclick="next()"><i class="fa-solid fa-arrow-right"></i></button>
                                 </div>
-            
-                            </div>
                         </div>
-            
-                        <div class="lenguaje">
-                            <div class="dropdown-lang" data-lang="python">
-                                <span data-lang="python">Python</span>
-                                <span data-lang="python"><i class="fa-solid fa-caret-down" data-lang="python"></i></span>
-                            </div>
-                            <div class="proyect-cards" id="python-cards" data-div-cards>
-                                <div class="card-proyect">
-                                    <img src="./assets/images/generador-plantillas.png" alt="">
-                                    <div class="card-details">
-                                        <h3>Generador de archivos mediante plantilla</h3>
-                                        <div class="tags">
-                                            <span class="tag">PyMuPDF</span>
-                                            <span class="tag">python-docx</span>
-                                            <span class="tag">Tkinter</span>
-                                        </div>
-                                        <a href="https://github.com/KuraiRantan/generador-documentos" target="_blank" class="link-icons">
-                                            <i class="fa-brands fa-github fa-xl"></i>
-                                        </a>
-                                        <span class="span-executable">Descargar:
-                                            <a class="span-btn-download" href="setups/generador-de-archivos" download>
-                                                <i class="fa-brands fa-linux"></i>
-                                            </a>
-                                            <a class="span-btn-download" href="setups/generador-de-archivos.exe" download>
-                                                <i class="fa-brands fa-windows"></i>
-                                            </a>
-                                        </span>
-                                        <p>Aplicación de escritorio usando Python y Tkinter en la cual por medio de una plantilla en
-                                            documento *.docx y teniendo un archivo *.txt con los datos que se reemplazaran en la
-                                            plantilla, el resultado seran la misma cantidad de filas del documento de datos los
-                                            cuales
-                                            podran guardarse como *.docx o *.pdf.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="lenguaje">
-                            <div class="dropdown-lang" data-lang="java">
-                                <span data-lang="java">Java</span>
-                                <span data-lang="java"><i class="fa-solid fa-caret-down" data-lang="java"></i></span>
-                            </div>
-                            <div class="proyect-cards" id="java-cards" data-div-cards>
-                                <p>Pendiente por subir</p>
-                            </div>
-                        </div>
-            
-                        <div class="lenguaje">
-                            <div class="dropdown-lang" data-lang="visualbasic">
-                                <span data-lang="visualbasic">VisualBasic</span>
-                                <span data-lang="visualbasic"><i class="fa-solid fa-caret-down" data-lang="visualbasic"></i></span>
-                            </div>
-                            <div class="proyect-cards" id="visualbasic-cards" data-div-cards>
-                                <div class="card-proyect" id="5">
-                                    <img src="./assets/images/inventario.png" alt="">
-                                    <div class="card-details">
-                                        <h3>Inventario</h3>
-                                        <div class="tags">
-                                            <span class="tag">MariaDB</span>
-                                            <span class="tag">GunaUI</span>
-                                            <span class="tag">WinForms</span>
-                                        </div>
-            
-                                        <a href="https://res.cloudinary.com/di6mevrkr/video/upload/v1689886531/effwmswmfziuunuxng8q.mp4" target="_blank" class="link-icons">
-                                            <i class="fa-solid fa-video fa-xl"></i>
-                                        </a>
-                                        <p>Aplicación de escritorio usando Visual Basic y Access en la cual se generan tanto
-                                            entradas
-                                            como salidas de productos, manejo de inventaro y cuentas basicas.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    
+                    </div>
+    
+                       
+                    </div>
 
+                    <a class="link-all-proyects" href="/proyects.html">Ver más</a>
+                </div>
             </div>
         </div>
         </div>
@@ -354,6 +398,11 @@
                     <div></div>
                     <div></div>
                     <div></div>
+                </div>
+                <div class="clipboard-container">
+                    <input type="text" id="email-to-copy" class="email-to-copy" disabled value="jorgecamargo2012902@gmail.com">
+                    <button onclick="copyEmail(event)" class="btn-copy"><i class="fa-solid fa-clipboard"></i></button>
+                    <button onclick="sendEmail(event)" class="btn-send-email"><i class="fa-solid fa-paper-plane"></i></button>
                 </div>
                 <input type="text" name="nombre" placeholder="Nombre(s)" />
                 <input type="text" name="apellido" placeholder="Apellido(s)" />
